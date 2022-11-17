@@ -1,0 +1,73 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    background-color: #ffc048;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+}
+
+#cards__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40%;
+    width: 60%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.active p {
+    display: block;
+    margin-bottom: 10px;
+}
+
+p {
+    display: none;
+}
+
+.card {
+    height: 33%;
+    width: 100%;
+    background-color: white;
+    list-style: none;
+    border-radius: 5px;
+    transition: all ease-out 0.5s;
+    counter-increment: step-counter;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    outline: 1px solid rgb(236, 235, 235);
+}
+
+h1 {
+    cursor: pointer;
+    margin: 0px;
+    margin-left: 30px;
+}
+
+h1::before {
+    content: counter(step-counter) ". ";
+}
+
+p {
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+ol {
+    margin: 0px;
+    padding: 0px;
+}
+
+.active {
+    z-index: 99;
+    padding: 20px;
+    box-shadow: 1px 4px 28px -5px rgba(0, 0, 0, 0.52);
+    -webkit-box-shadow: 1px 4px 28px -5px rgba(0, 0, 0, 0.52);
+    -moz-box-shadow: 1px 4px 28px -5px rgba(0, 0, 0, 0.52);
+}
